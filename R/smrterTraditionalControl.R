@@ -60,6 +60,8 @@ smrterTraditionalControl = function( case_path , cont_path , sitesInfo_interest=
   uni_refName = intersect( unique(as.character( case$index$fullRefName )) , 
                            unique(as.character( control$index$fullRefName )) ) 
   
+  uni_refName = intersect( uni_refName , unique(as.character(sitesInfo_interest$refName)) ) 
+  
   num = 0
   result = list()
   
